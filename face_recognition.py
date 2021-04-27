@@ -10,11 +10,11 @@ import time
 import pickle
 from PIL import Image
 import tensorflow.compat.v1 as tf
-video= './class/2.mp4'
+video= './class/1.MOV'# webcam '0'
 modeldir = './model/20180402-114759.pb'
 classifier_filename = './class/classifier.pkl'
 npy='./npy'
-train_img="./train_img"
+train_img="./train_img" 
 with tf.Graph().as_default():
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.6)
     sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
